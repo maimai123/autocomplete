@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>autocomplete插件</title>
+    <style media="screen">
+      *{font-family: 'Microsoft YaHei';}
+      .cover{margin: 200px auto;}
+      body{background: url(pic-0.jpg) no-repeat;background-size: 100% 100%;width:100%;height: 800px;overflow: hidden;}
+      .box{position: relative;width:400px;margin: 20px auto;}
+      #myInput{height:30px;line-height: 30px;border:1px solid #25BFAD; padding: 4px;box-sizing: border-box;outline:none;border-radius:3px;width:300px;}
+      .btn{position: absolute;right: 0px;top:0px; width:80px;height: 30px;line-height: 30px;color: #fff;font-size: 16px;background:#25BFAD;border:none;outline: none;}
+      .down{margin-top: -2px;background: #fff;}
+      .single{height:30px;line-height: 30px;cursor: pointer;padding-left: 5px;}
+      .single:hover{background:#E0EBF1;color:#366076;}
+      .tc{text-align: center;}.mt20{margin-top: 20px;}
+    </style>
+  </head>
+  <body>
+    <div class="cover">
+      <h1 class="tc">complete插件</h1>
+      <div class="box">
+        <input type="text" id="myInput" autocomplete="off"/>
+        <button class="btn">搜索</button>
+      </div>
+      <div id="show" class="tc mt20"></div>
+    </div>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $("#myInput").autocomplete();
+    });
+    </script>
+  </body>
+</html>
