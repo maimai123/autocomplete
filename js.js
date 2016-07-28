@@ -33,9 +33,13 @@
               $.each( record ,function(i,v){
                 $.each(v,function(j,k){
                 var jsonText = k.text;
-                var jsonMean = k.mean;
+                var jsonConvert = k.convert;
                 if( jsonText.indexOf(str) > '-1'){
-                  $("<div class='single' data-mean='"+jsonMean+"'>"+jsonText+"</div>").appendTo($(".down"));
+                  if(jsonConvert){
+                    $("<div class='single'>"+jsonConvert+"</div>").appendTo($(".down"));
+                  }else{
+                    $("<div class='single'>"+jsonText+"</div>").appendTo($(".down"));
+                  }
                 }
                 });
               });
